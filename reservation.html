@@ -12,6 +12,29 @@
 }
 </style>
 <body>
+
+    
+
+<script type = "text/javascript">
+$("#addButton").on("click", function(event){
+    event.preventDefault();
+    let newReservations = [{
+    name: $('#name').val().trim(),
+    phone: $('#phone').val().trim(),
+    email: $('#email').val().trim(),
+    id: $('#id').val().trim()
+
+}];
+
+    $.post("/api/confirm", newReservations)
+    .then(function(data){
+        console.log("confirmed", data);
+        alert("Your reservation is confirmed!")
+    });
+})
+
+</script>    
+
     <div class="jumbotron center">
         <h1 class="display-4">Hot Restaurant</h1>
         <p class="lead">Reserve a table by inputting your information below!</p>
@@ -46,5 +69,7 @@
       </div>
 <br>
 <br>
+
 </body>
+
 </html>

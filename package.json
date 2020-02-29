@@ -1,0 +1,23 @@
+{
+  "name": "hot-restaurant",
+  "version": "1.0.0",
+  "description": "A Hot restaurant reservation-making application",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelly-bazella/Hot-Restaurant.git"
+  },
+  "author": "Travel-Master",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelly-bazella/Hot-Restaurant/issues"
+  },
+  "homepage": "https://github.com/kelly-bazella/Hot-Restaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
