@@ -31,7 +31,7 @@ let currentRes = [
 
 //Routes
 //======================================
-app.post("/api/reservations", function(req, res){
+app.post("/api/confirm", function(req, res){
     let newReservations= req.body;
 
     newReservations.routeName = newReservations.name.replace(/\s+/g, "").toLowerCase();
@@ -49,15 +49,22 @@ app.get("/reservations", function(req, res){
     res.sendFile(path.join(__dirname,"reservation.html"))
 });
 
+app.get("/confirm", function(req,res){
+    res.sendFile(path.join(__dirname, "confirm.html"))
+});
 
 
 app.get("/api/confirm", function(req,res){
     return res.json(currentRes)
 });
 
+app.get("/api/reservations", function(req, res){
+    return res.json(currentRes)
+});
+
 app.get("/api/waitlist", function(req,res){
     return res.json(currentRes)
-})
+});
 
 
 //Starts the server listening to begin listening
